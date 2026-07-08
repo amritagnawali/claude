@@ -74,7 +74,16 @@ setInterval(() => {
                         <li><a href="#services">Pre-Departure Orientation</a></li>
                     </ul>
                 </li>
-                <li><a href="#countries">Countries</a></li>
+                <li class="has-dropdown">
+<a href="#countries" class="dropdown-toggle">Countries <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+<ul class="dropdown-menu">
+<li><a href="#" onclick="openCountryModal('uk'); return false;">Study in UK</a></li>
+<li><a href="#" onclick="openCountryModal('usa'); return false;">Study in USA</a></li>
+<li><a href="#" onclick="openCountryModal('australia'); return false;">Study in Australia</a></li>
+<li><a href="#" onclick="openCountryModal('germany'); return false;">Study in Germany</a></li>
+<li><a href="#" onclick="openCountryModal('newzealand'); return false;">Study in New Zealand</a></li>
+</ul>
+</li>
                 <li><a href="#why-us">Why Us</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
