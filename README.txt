@@ -9,9 +9,10 @@ WHAT'S IN THIS ZIP
 - js/destination-slider.js (new: the Study Destinations carousel logic)
 
 NEW: MESSAGE FROM CEO PAGE
-- index.html now has a "Message from CEO" button inside the About section,
-  next to "Learn More About Us". It is NOT visible content on the home
-  page itself — clicking it navigates to ceo-message.html, a separate page.
+- "Message from CEO" is now the first item in the About dropdown menu in
+  the navigation (About > Message from CEO, Our Story, Why Choose Us...).
+  It does NOT appear as content or a button on the home page itself.
+- Clicking it opens ceo-message.html, a separate page.
 - ceo-message.html currently has placeholder text (marked [Placeholder])
   and a placeholder name/photo icon. Search for data-key="ceoName",
   "ceoTitle", "ceoMsg1"-"ceoMsg4", "ceoSigName", "ceoSigTitle" to replace

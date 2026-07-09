@@ -2312,14 +2312,8 @@ img {
 }
 
 /* ==========================================
-   ABOUT CTA ROW (Learn More + Message from CEO)
+   OUTLINE NAVY BUTTON (used on CEO message page)
    ========================================== */
-.about-cta-row {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-}
-
 .btn-outline-navy {
     background: transparent;
     color: var(--primary);
@@ -2485,8 +2479,6 @@ img {
 
 @media (max-width: 480px) {
     .ceo-hero h1 { font-size: 1.7rem; }
-    .about-cta-row { flex-direction: column; }
-    .about-cta-row .btn { width: 100%; justify-content: center; }
 }
 
 /* Print styles */
