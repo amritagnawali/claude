@@ -494,7 +494,7 @@ img {
     background: var(--primary-dark);
     position: relative;
     overflow: hidden;
-    padding: 100px 0 80px;
+    padding: 0 0 80px;
 }
 
 .hero-bg-slider {
@@ -556,16 +556,8 @@ img {
     pointer-events: none;
 }
 
-.hero::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100px;
-    z-index: 2;
-    background: linear-gradient(to top, var(--white), transparent);
-    pointer-events: none;
+.hero::after{
+    display:none;
 }
 
 .hero-content {
@@ -1842,19 +1834,20 @@ img {
         display: none;
     }
 
-    .hero {
+
+    . {
         padding: 60px 0 40px;
     }
 
-    .hero-title {
+    .-title {
         font-size: 2rem;
     }
 
-    .hero-desc {
+    .-desc {
         font-size: 1rem;
     }
 
-    .hero-stats {
+    .-stats {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
     }
@@ -1940,15 +1933,15 @@ img {
 }
 
 @media (max-width: 480px) {
-    .hero-title {
+    .-title {
         font-size: 1.6rem;
     }
 
-    .hero-btns {
+    .-btns {
         flex-direction: column;
     }
 
-    .hero-btns .btn {
+    .-btns .btn {
         width: 100%;
         justify-content: center;
     }
