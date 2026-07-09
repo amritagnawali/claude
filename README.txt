@@ -20,6 +20,29 @@ NEW: MESSAGE FROM CEO PAGE
   ceo-photo icon div for a real <img>.
 - The page reuses your site's header/footer and links back to index.html.
 
+PHOTO ALIGNMENT FIX (important if you added a real CEO photo)
+The alignment broke earlier because the placeholder icon <div> was
+replaced directly with an <img> tag instead of putting the <img> INSIDE
+that div. This version fixes it properly:
+
+  <div class="ceo-photo">
+      <img src="images/ceo-photo.jpg" alt="CEO Photo">
+  </div>
+
+To add the real photo:
+1. Put the photo file in your images/ folder (e.g. images/ceo-photo.jpg).
+2. In ceo-message.html, find the <div class="ceo-photo"> block and change
+   the src="..." to match your actual filename. Do NOT delete the
+   surrounding <div class="ceo-photo"> — the <img> must stay nested
+   inside it, or the layout will break again.
+3. If no photo is found at that path, it will safely fall back to the
+   placeholder icon (no broken image icon shown).
+
+Also replaced the "[CEO Name]" / "[Sunil Nepal]" bracket-style placeholder
+text with plain "Add CEO Name Here" — the square brackets were meant as a
+placeholder marker, not part of the actual name, sorry for the confusion.
+Just replace that text directly with the real name (no brackets needed).
+
 IMPORTANT - HOW TO DEPLOY
 1. In your GitHub repo, replace index.html and css/style.css with these versions.
 2. Add ceo-message.html, js/animation.js, and js/destination-slider.js as
