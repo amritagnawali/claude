@@ -667,7 +667,6 @@ img {
     gap: 60px;
     align-items: center;
 }
-
 .about-image {
     position: relative;
 }
@@ -684,6 +683,7 @@ img {
     justify-content: center;
     box-shadow: var(--shadow-xl);
 }
+
 
 .about-img-wrapper::before {
     content: '';
