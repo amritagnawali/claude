@@ -80,4 +80,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
     buildDots();
     update();
+
+    // ---- Auto-scroll every 2 seconds, pausing while hovered ----
+    var autoplayTimer = null;
+
+    function startAutoplay() {
+        autoplayTimer = setInterval(function () {
+            var next = index >= maxIndex ? 0 : index + 1;
+            goTo(next);
+        }, 2000);
+    }
+
+    function stopAutoplay() {
+        clearInterval(autoplayTimer);
+    }
+
+    var viewport = document.querySelector('.slider-viewport');
+    if (viewport) {
+        viewport.addEventListener('mouseenter', stopAutoplay);
+        viewport.addEventListener('mouseleave', startAutoplay);
+    }
+
+    startAutoplay();
 });

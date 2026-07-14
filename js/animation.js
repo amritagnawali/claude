@@ -47,14 +47,4 @@ document.addEventListener('DOMContentLoaded', function () {
         tick();
     }
 
-    // ---- About card background: cycles through country photos every 2s ----
-    var aboutSlides = document.querySelectorAll('.about-bg-slide');
-    if (aboutSlides.length) {
-        var aboutIndex = 0;
-        setInterval(function () {
-            aboutSlides[aboutIndex].classList.remove('active');
-            aboutIndex = (aboutIndex + 1) % aboutSlides.length;
-            aboutSlides[aboutIndex].classList.add('active');
-        }, 2000);
-    }
 });
