@@ -47,23 +47,14 @@ document.addEventListener('DOMContentLoaded', function () {
         tick();
     }
 
-    // ---- Corner flags: randomly swap between destination flags ----
-    var flagPool = ['🇬🇧', '🇺🇸', '🇦🇺', '🇩🇪', '🇳🇿'];
-    var flagEls = document.querySelectorAll('.flag-corner');
-
-    if (flagEls.length) {
+    // ---- About card background: cycles through country photos every 2s ----
+    var aboutSlides = document.querySelectorAll('.about-bg-slide');
+    if (aboutSlides.length) {
+        var aboutIndex = 0;
         setInterval(function () {
-            var el = flagEls[Math.floor(Math.random() * flagEls.length)];
-            var next = flagPool[Math.floor(Math.random() * flagPool.length)];
-
-            el.style.opacity = '0';
-            el.style.transform = 'scale(0.6)';
-
-            setTimeout(function () {
-                el.textContent = next;
-                el.style.opacity = '';
-                el.style.transform = '';
-            }, 300);
-        }, 2200);
+            aboutSlides[aboutIndex].classList.remove('active');
+            aboutIndex = (aboutIndex + 1) % aboutSlides.length;
+            aboutSlides[aboutIndex].classList.add('active');
+        }, 2000);
     }
 });
