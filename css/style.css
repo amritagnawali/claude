@@ -2591,6 +2591,66 @@ img {
 }
 
 /* ==========================================
+   COUNTRY HERO - LIGHT / BREADCRUMB STYLE
+   ========================================== */
+.country-hero-light {
+    position: relative;
+    background-color: #f4f7fb;
+    background-size: cover;
+    background-position: center;
+    padding: 44px 0 64px;
+    overflow: hidden;
+}
+
+.country-hero-light .container {
+    position: relative;
+    z-index: 1;
+}
+
+.light-breadcrumb {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #6b7688;
+    margin-bottom: 18px;
+}
+
+.light-breadcrumb a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.light-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.light-breadcrumb .crumb-sep {
+    margin: 0 8px;
+    color: #b0b8c4;
+}
+
+.light-breadcrumb .crumb-current {
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+.country-hero-light h1 {
+    color: var(--text-dark);
+    font-size: 2.6rem;
+    margin-bottom: 14px;
+}
+
+.country-hero-light p {
+    color: var(--text-body);
+    max-width: 620px;
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+@media (max-width: 480px) {
+    .country-hero-light h1 { font-size: 1.9rem; }
+}
+
+/* ==========================================
    COUNTRY / STUDY DESTINATION PAGES
    ========================================== */
 .country-hero .flag-emoji {
