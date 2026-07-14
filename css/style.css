@@ -2615,33 +2615,56 @@ img {
     background: var(--white);
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
-    padding: 20px 22px;
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
+    overflow: hidden;
+    display: block;
     transition: var(--transition);
 }
 
 .uni-card:hover {
-    box-shadow: var(--shadow);
-    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
 }
 
-.uni-card i {
-    color: var(--primary);
-    font-size: 1.3rem;
-    margin-top: 3px;
+.uni-card-img {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
 }
 
-.uni-card h4 {
+.uni-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.uni-card:hover .uni-card-img img {
+    transform: scale(1.06);
+}
+
+.uni-card-body {
+    padding: 18px 20px 20px;
+}
+
+.uni-card-body h4 {
     font-size: 1rem;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
+    color: var(--text-dark);
 }
 
-.uni-card p {
-    font-size: 0.88rem;
+.uni-card-body p {
+    font-size: 0.85rem;
     color: var(--text-light);
     margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.uni-card-body p i {
+    color: var(--primary);
+    font-size: 0.8rem;
 }
 
 .visa-section {
