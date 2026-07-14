@@ -1019,6 +1019,18 @@ img {
     margin-top: 50px;
 }
 
+.why-grid-3col {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 900px) {
+    .why-grid-3col { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .why-grid-3col { grid-template-columns: 1fr; }
+}
+
 .why-feature {
     background: var(--white);
     border-radius: var(--radius-xl);
@@ -1546,6 +1558,43 @@ img {
 .back-to-top:hover {
     background: var(--primary-dark);
     transform: translateY(-4px);
+}
+
+/* ==========================================
+   WHATSAPP FLOAT BUTTON
+   ========================================== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 56px;
+    height: 56px;
+    background: #25D366;
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    z-index: 999;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    transition: var(--transition);
+}
+
+.whatsapp-float:hover {
+    transform: translateY(-4px) scale(1.05);
+    color: var(--white);
+    box-shadow: 0 8px 22px rgba(37, 211, 102, 0.5);
+}
+
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 48px;
+        height: 48px;
+        font-size: 1.4rem;
+        bottom: 20px;
+        left: 20px;
+    }
 }
 
 /* ==========================================
@@ -2883,6 +2932,45 @@ img {
 
 @media (max-width: 700px) {
     .uni-directory-grid { grid-template-columns: 1fr; }
+}
+
+.uni-list {
+    max-width: 800px;
+    margin: 30px auto 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.uni-list-item a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 18px 24px;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.02rem;
+    transition: var(--transition);
+}
+
+.uni-list-item a:hover {
+    background: var(--primary-light);
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateX(4px);
+}
+
+.uni-list-item a i {
+    color: var(--primary);
+    font-size: 0.85rem;
+    flex-shrink: 0;
 }
 
 .visa-section {
