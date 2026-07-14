@@ -791,14 +791,14 @@ img {
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 18px;
     margin-top: 50px;
 }
 
 .service-card {
     background: var(--white);
     border-radius: var(--radius-xl);
-    padding: 40px 32px;
+    padding: 32px 26px;
     text-align: left;
     transition: var(--transition);
     border: 1px solid var(--border);
@@ -2030,7 +2030,7 @@ img {
     aspect-ratio: 4/5;
     border-radius: var(--radius-xl);
     overflow: hidden;
-    background: var(--gradient-hero);
+    background: linear-gradient(135deg, #f46b45 0%, #d9480f 50%, #f46b45 100%);
     box-shadow: var(--shadow-xl);
     display: flex;
     align-items: center;
@@ -2114,8 +2114,8 @@ img {
     font-family: 'Poppins', sans-serif;
     font-weight: 800;
     font-size: 2.1rem;
-    color: var(--accent);
-    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.3);
     min-height: 1.3em;
 }
 
