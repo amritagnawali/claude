@@ -1063,7 +1063,7 @@ img {
 .why-feature h3 {
     font-size: 1.2rem;
     margin-bottom: 12px;
-    color: var(--text-dark);
+    color: var(--primary);
 }
 
 .why-feature p {
@@ -2648,23 +2648,25 @@ img {
 
 .uni-card-body h4 {
     font-size: 1rem;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     color: var(--text-dark);
-}
-
-.uni-card-body p {
-    font-size: 0.85rem;
-    color: var(--text-light);
-    margin: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 8px;
 }
 
-.uni-card-body p i {
+.uni-card-body h4 i {
     color: var(--primary);
-    font-size: 0.8rem;
+    font-size: 0.78rem;
+    flex-shrink: 0;
+}
+
+.uni-card-body p {
+    font-size: 0.86rem;
+    color: var(--text-light);
+    margin: 0;
+    line-height: 1.6;
 }
 
 .visa-section {
