@@ -77,9 +77,14 @@ img {
 }
 
 .container {
-    max-width: 1280px;
+    max-width: 1320px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 14px;
+}
+
+.container-wide {
+    max-width: 1520px;
+    padding: 0 10px;
 }
 
 /* Buttons */
@@ -659,7 +664,7 @@ img {
 .about-wrapper {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
-    gap: 60px;
+    gap: 40px;
     align-items: center;
 }
 .about-image {
@@ -778,7 +783,7 @@ img {
    SERVICES SECTION
    ========================================== */
 .services {
-    padding: 100px 0;
+    padding: 70px 0;
     background: var(--bg-light);
     text-align: center;
 }
@@ -792,7 +797,7 @@ img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 18px;
-    margin-top: 50px;
+    margin-top: 32px;
 }
 
 .service-card {
@@ -2030,7 +2035,7 @@ img {
     aspect-ratio: 4/5;
     border-radius: var(--radius-xl);
     overflow: hidden;
-    background: linear-gradient(135deg, #f46b45 0%, #d9480f 50%, #f46b45 100%);
+    background: var(--gradient-hero);
     box-shadow: var(--shadow-xl);
     display: flex;
     align-items: center;
@@ -2077,6 +2082,7 @@ img {
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: opacity 0.3s ease;
 }
 
 .flag-tl { top: 8%; left: 10%; animation-delay: 0s; }
@@ -2114,8 +2120,8 @@ img {
     font-family: 'Poppins', sans-serif;
     font-weight: 800;
     font-size: 2.1rem;
-    color: #ffffff;
-    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.3);
+    color: var(--accent);
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.2);
     min-height: 1.3em;
 }
 
@@ -2224,22 +2230,27 @@ img {
 
 .slider-track {
     display: flex;
-    gap: 24px;
+    gap: 16px;
     transition: transform 0.5s ease;
 }
 
 .slide-card {
     position: relative;
-    flex: 0 0 calc((100% - 48px) / 3);
-    height: 360px;
+    display: block;
+    flex: 0 0 calc((100% - 32px) / 3);
+    height: 380px;
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-lg);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
 
 .slide-card:hover {
     transform: translateY(-6px);
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
 }
 
 .slide-card img {
@@ -2253,13 +2264,21 @@ img {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
-    padding: 16px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    bottom: 18px;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.slide-label span {
+    background: var(--accent);
     color: #fff;
-    font-size: 1.15rem;
+    padding: 9px 24px;
+    border-radius: 50px;
+    font-size: 1.05rem;
     font-weight: 700;
-    text-align: left;
+    letter-spacing: 0.2px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
 .slider-arrow {
@@ -2323,7 +2342,7 @@ img {
 }
 
 @media (max-width: 900px) {
-    .slide-card { flex: 0 0 calc((100% - 24px) / 2); }
+    .slide-card { flex: 0 0 calc((100% - 16px) / 2); }
 }
 
 @media (max-width: 600px) {

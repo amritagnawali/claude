@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function update() {
         var cardWidth = cards[0].getBoundingClientRect().width;
-        var gap = 24;
+        var gap = 16;
         var offset = index * (cardWidth + gap);
         track.style.transform = 'translateX(-' + offset + 'px)';
 

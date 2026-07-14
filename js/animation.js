@@ -47,4 +47,20 @@ document.addEventListener('DOMContentLoaded', function () {
         tick();
     }
 
+    // ---- Corner flags: cycle each badge through different destination countries ----
+    var flagCodes = ['gb', 'us', 'au', 'de', 'nz', 'ca', 'ie', 'fr', 'sg', 'jp'];
+    var flagImgs = document.querySelectorAll('.flag-corner img');
+
+    if (flagImgs.length) {
+        setInterval(function () {
+            flagImgs.forEach(function (img) {
+                var code = flagCodes[Math.floor(Math.random() * flagCodes.length)];
+                img.style.opacity = '0';
+                setTimeout(function () {
+                    img.src = 'https://flagcdn.com/w80/' + code + '.png';
+                    img.style.opacity = '1';
+                }, 300);
+            });
+        }, 2200);
+    }
 });
