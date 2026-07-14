@@ -2669,6 +2669,222 @@ img {
     line-height: 1.6;
 }
 
+.uni-more-wrap {
+    text-align: center;
+    margin-top: 34px;
+}
+
+/* ==========================================
+   REQUIREMENTS CHECKLIST SECTION
+   ========================================== */
+.requirements-section {
+    padding: 70px 0;
+    background: var(--white);
+    text-align: center;
+}
+
+.requirements-grid {
+    max-width: 1200px;
+    margin: 36px auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: left;
+}
+
+.requirement-card {
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 26px 22px;
+}
+
+.requirement-card h4 {
+    font-size: 1.05rem;
+    color: var(--primary);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--accent);
+    display: inline-block;
+}
+
+.requirement-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.requirement-card ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.88rem;
+    color: var(--text-body);
+    line-height: 1.5;
+}
+
+.requirement-card ul li i {
+    color: var(--primary);
+    margin-top: 3px;
+    flex-shrink: 0;
+    font-size: 0.85rem;
+}
+
+/* ==========================================
+   APPLICATION STEPS SECTION
+   ========================================== */
+.apply-steps-section {
+    padding: 70px 0;
+    background: var(--gradient-cta);
+    text-align: center;
+    color: var(--white);
+}
+
+.apply-steps-section .badge {
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--white);
+}
+
+.apply-steps-section h2 {
+    color: var(--white);
+}
+
+.apply-steps-section .section-desc {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.apply-steps-grid {
+    max-width: 1100px;
+    margin: 36px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: left;
+}
+
+.apply-step-card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-md);
+    padding: 26px 22px;
+}
+
+.apply-step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--gradient-accent);
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.apply-step-card h4 {
+    font-size: 1.02rem;
+    margin-bottom: 10px;
+    color: var(--white);
+}
+
+.apply-step-card p {
+    font-size: 0.87rem;
+    color: rgba(255, 255, 255, 0.78);
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .requirements-grid { grid-template-columns: repeat(2, 1fr); }
+    .apply-steps-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+    .requirements-grid { grid-template-columns: 1fr; }
+}
+
+/* ==========================================
+   FULL UNIVERSITY DIRECTORY (top-universities page)
+   ========================================== */
+.uni-directory-section {
+    padding: 60px 0 80px;
+}
+
+.uni-directory-grid {
+    max-width: 1100px;
+    margin: 36px auto 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    text-align: left;
+}
+
+.uni-directory-card {
+    display: flex;
+    gap: 16px;
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    transition: var(--transition);
+}
+
+.uni-directory-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+}
+
+.uni-directory-rank {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--gradient-accent);
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.uni-directory-body h4 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.uni-directory-body h4 a {
+    color: var(--text-dark);
+    text-decoration: none;
+}
+
+.uni-directory-body h4 a:hover {
+    color: var(--primary);
+}
+
+.uni-directory-body h4 i {
+    color: var(--primary);
+    font-size: 0.72rem;
+}
+
+.uni-directory-body p {
+    font-size: 0.86rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 700px) {
+    .uni-directory-grid { grid-template-columns: 1fr; }
+}
+
 .visa-section {
     padding: 70px 0;
     background: var(--white);
